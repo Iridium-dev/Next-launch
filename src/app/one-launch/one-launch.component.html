@@ -1,0 +1,27 @@
+<div class="oneCard" data-aos='fade-up' [attr.data-aos-delay]='time' [routerLink]="['/mission', launch.url]">
+  <div class="imagePart" [ngStyle]="{'background': 'url(' + backgroundUrl + ') no-repeat center / cover'}"></div>
+  <div class="informationPart">
+    <h4 class="net">{{this.dateNet}}<span class="updateCountDown">{{countdownValue}}</span></h4>
+    <h3 class="name">{{launch.name}}</h3>
+    <p class="missionDescription" *ngIf="launch.mission">{{launch.mission.description}}</p>
+    <p class="noMissionDataMessage" *ngIf="!launch.mission">No description of the mission is given</p>
+    <div class="parameterDataContainer">
+      <div class="oneParameterData">
+        <h4 class="label"><pre>Rocket :</pre></h4>
+        <h4 class="parameterData">{{launch.rocket.configuration.name}}</h4>
+      </div>
+      <div class="oneParameterData">
+        <h4 class="label"><pre>Provider :</pre></h4>
+        <h4 class="parameterData">{{launch.rocket.configuration.launch_service_provider}}</h4>
+      </div>
+      <div class="oneParameterData">
+        <h4 class="label"><pre>Pad location :</pre></h4>
+        <h4 class="parameterData">{{launch.pad.location.name}}</h4>
+      </div>
+      <div class="oneParameterData">
+        <h4 class="label"><pre>Pad :</pre></h4>
+        <h4 class="parameterData">{{launch.pad.name}}</h4>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Sans+Pro:wght@300;400&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+h1{
+  font-weight: 800;
+}
+
+h2{
+  font-weight: 700;
+}
+
+h3{
+  font-weight: 600;
+}
+
+body{
+  background-color: #ECF0F3;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #fff;
+  background: #222;
+}
+
+::selection {
+  color: #fff;
+  background: #222;
+}

@@ -1,0 +1,70 @@
+.oneCard{
+  width: 100%;
+  margin: 30px;
+  border-radius: 5px;
+  box-shadow: 18px 18px 30px #D1D9E6, -18px -18px 30px #fff;
+  display: flex;
+  transition: 0.05s ease-in-out all;
+  cursor: pointer;
+  outline: 0px;
+  margin-bottom: 40px;
+}
+
+.informationPart{
+  padding: 20px;
+}
+
+.net{
+  color: #333;
+  font-weight: 400;
+}
+
+.name{
+  font-size: 1.4em;
+
+  font-weight: 700;
+  margin: 2px 0px 10px 0px;
+}
+
+.imagePart{
+  min-width: 250px;
+  min-height: 250px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.oneCard:hover{
+  background-color: #d5deed;
+  box-shadow: 10px 10px 20px #c1cad9, -10px -10px 20px #fff;
+}
+
+.updateCountDown{
+  margin-left: 20px;
+  background-color: #333;
+  border-radius: 2px;
+  color: #fff;
+  padding: 2px 4px;
+}
+
+.parameterDataContainer{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.oneParameterData{
+  display: flex;
+  margin: 2px 10px 4px 0px;
+  padding: 3px;
+  border-radius: 2px;
+  border: 1px #555 solid;
+}
+
+.label{
+  font-weight: 400;
+  margin-right: 5px;
+}
+
+.noMissionDataMessage{
+  color: #b52e24;
+}

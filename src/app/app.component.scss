@@ -1,0 +1,45 @@
+header, .elementsInTheOrderPart{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.elementInHeader{
+  margin: 0px 10px 0px 10px;
+  color: #333;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+header{
+  margin-top: 30px;
+  margin-bottom: 50px;
+  position: sticky;
+  top: 30px;
+  z-index: 1000;
+}
+
+h2{
+  margin-left: 20px;
+  font-size: 1.8em;
+  margin-right: 20px;
+  user-select: none;
+}
+
+.linkActive{
+  text-decoration: underline;
+  color: #111;
+}
+
+.linkActiveFooter{
+  text-decoration: underline;
+  color: #ffffffaa;
+}
+
+footer{
+  display: flex;
+  background-color: #111;
+  padding: 50px;
+  color: #ffffffcc;
+  align-items: center;
+}
