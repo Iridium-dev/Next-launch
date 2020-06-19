@@ -1,8 +1,24 @@
 <div class="allLaunchContainer">
-  <app-one-launch *ngFor="let launch of arrayOfLaunch; let index = index" [launch]=launch [time]=index></app-one-launch>
+  <app-one-launch *ngFor="let launch of arrayOfLaunch; let index = index" [launch]=launch [time]='index * timeRatio'></app-one-launch>
 </div>
 
-<!--<footer>
-  <h2 class="titleInFooter">Next launch</h2>
+<h4 class="buttonMoreLaunch" (click)="getMore()" *ngIf="displayRefresher && footerState">See more launch</h4>
+
+<footer *ngIf="footerState">
+  <div class="leftPart footerPart">
+    <h2 class="titleInFooter">Next launch</h2>
+    <pre>&lt;/&gt; with ❤️ by <a href="https://dujardinjulien-41cd5.web.app/home" class="linkInFooter" target="_blank">Dujardin Julien</a></pre>
+    <h4 class="githubLink">See this project on <a href="#" target="_blank" class="linkInFooter">Github</a></h4>
+  </div>
+  <div class="rightPart footerPart">
+    <h4 class="builtWith">Built with : </h4>
+
+    <div class="technoUsedContainer">
+      <h4 class="oneTechno">Angular</h4>
+      <h4 class="oneTechno">Html</h4>
+      <h4 class="oneTechno">CSS</h4>
+      <h4 class="oneTechno">TS</h4>
+      <h4 class="oneTechno">Space launch Api now</h4>
+    </div>
+  </div>
 </footer>
--->

@@ -12,6 +12,7 @@ import {filter} from 'rxjs/operators';
 })
 export class AppComponent {
   title = 'nextLaunch';
+  missionState;
   ngOnInit(){
     AOS.init({
       offset: 10,
@@ -20,7 +21,6 @@ export class AppComponent {
       once: true
     });
 
-    missionState;
 
   }
 
@@ -32,13 +32,12 @@ export class AppComponent {
   }
 
   updateUrl(){
-    console.log(this.router.url);
     let url = this.router.url;
     if (url.search("mission") != -1) {
-      this.missionState = 'Back to schedule';
+      this.missionState = true;
     }
     else{
-      this.missionState = 'Schedule';
+      this.missionState = false;
     }
   }
 

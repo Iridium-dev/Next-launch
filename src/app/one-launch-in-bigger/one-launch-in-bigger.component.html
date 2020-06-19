@@ -1,19 +1,26 @@
-<div id="top"></div>
-
-
 <div class="pageContainer" *ngIf="launch">
   <h1 data-aos='fade-up' [attr.data-aos-delay]="ratioTime*450" class="bigTitle">{{launch.name}}</h1>
   <div class="infosBigContainer">
 
   <div class="oneTwoContainer">
-    <div class="oneContainer" data-aos='fade-up' [attr.data-aos-delay]="ratioTime*550" >
+    <div class="oneContainer" data-aos='fade-up' [attr.data-aos-delay]="ratioTime*550" *ngIf="launch.mission">
       <div class="noneImageContainer">
         <h4 class="containerLabel">Mission</h4>
         <div class="line"></div>
-        <p class="descriptionP">{{launch.mission.description}}</p>
-        <h4 class="quickData"><span class="labelForData">Name : </span>{{launch.name}}</h4>
-        <h4 class="quickData"><span class="labelForData">Type : </span>{{launch.mission.type}}</h4>
+        <p class="descriptionP" *ngIf="launch.mission.description">{{launch.mission.description}}</p>
+        <h4 class="quickData" *ngIf="launch.name"><span class="labelForData">Name : </span>{{launch.name}}</h4>
+        <h4 class="quickData"><span class="labelForData">NET : </span>{{dateNet}}</h4>
+        <h4 class="quickData"><span class="labelForData">Countdown : </span>{{countdownValue}}</h4>
+        <h4 class="quickData" *ngIf="launch.mission.type"><span class="labelForData">Type : </span>{{launch.mission.type}}</h4>
         <h4 class="quickData" *ngIf="launch.mission.orbit"><span class="labelForData">Orbit : </span>{{launch.mission.orbit}}</h4>
+      </div>
+    </div>
+
+    <div class="oneContainer" data-aos='fade-up' [attr.data-aos-delay]="ratioTime*550" *ngIf="!launch.mission">
+      <div class="noneImageContainer">
+        <h4 class="containerLabel">Mission</h4>
+        <div class="line"></div>
+        <h4 class="quickData">No informations are given about the mission</h4>
       </div>
     </div>
 
@@ -26,10 +33,10 @@
         <h4 class="quickData"><span class="labelForData">Name : </span>{{launch.rocket.configuration.name}}</h4>
         <h4 class="quickData"><span class="labelForData">Full name : </span>{{launch.rocket.configuration.full_name}}</h4>
         <h4 class="quickData"><span class="labelForData">Family : </span>{{launch.rocket.configuration.family}}</h4>
-        <h4 class="quickData"><span class="labelForData">Maiden flight : </span>{{launch.rocket.configuration.maiden_flight}}</h4>
+        <h4 class="quickData" *ngIf="launch.rocket.configuration.maiden_flight"><span class="labelForData">Maiden flight : </span>{{launch.rocket.configuration.maiden_flight}}</h4>
         <h4 class="quickData"><span class="labelForData">Diameter : </span>{{launch.rocket.configuration.diameter}}</h4>
         <h4 class="quickData"><span class="labelForData">Launch mass : </span>{{launch.rocket.configuration.launch_mass}}</h4>
-        <h4 class="quickData"><span class="labelForData">Length : </span>{{launch.rocket.configuration.length}}</h4>
+        <h4 class="quickData" *ngIf="launch.rocket.configuration.length"><span class="labelForData">Length : </span>{{launch.rocket.configuration.length}}</h4>
         <h4 class="quickData"><span class="labelForData">Max stage : </span>{{launch.rocket.configuration.max_stage}}</h4>
         <h4 class="quickData"><span class="labelForData">Min stage : </span>{{launch.rocket.configuration.min_stage}}</h4>
       </div>
@@ -58,7 +65,7 @@
         <h4 class="quickData"><span class="labelForData">Name : </span>{{launch.rocket.configuration.launch_service_provider.name}}</h4>
         <h4 class="quickData"><span class="labelForData">Abbrev : </span>{{launch.rocket.configuration.launch_service_provider.abbrev}}</h4>
         <h4 class="quickData"><span class="labelForData">Contry code : </span>{{launch.rocket.configuration.launch_service_provider.country_code}}</h4>
-        <h4 class="quickData"><span class="labelForData">Launchers : </span>{{launch.rocket.configuration.launch_service_provider.launchers}}</h4>
+        <h4 class="quickData"><span class="labelForData" *ngIf="launch.rocket.configuration.launch_service_provider.launchers">Launchers : </span>{{launch.rocket.configuration.launch_service_provider.launchers}}</h4>
         <h4 class="quickData"><span class="labelForData">Type : </span>{{launch.rocket.configuration.launch_service_provider.type}}</h4>
 
 

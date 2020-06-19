@@ -11,7 +11,7 @@ import {
 
   export const fader =
     trigger('routeAnimations', [
-      transition('* <=> *', [
+      transition('* <=> fade', [
         // Set a default  style for enter and leave
         query(':enter, :leave', [
           style({
@@ -34,7 +34,7 @@ import {
       //transition('* => isLeft', slideTo('left') ),
       //transition('* => isRight', slideTo('right') ),
       transition('isRight => isLeft', slideTo('left') ),
-      transition('isLeft => isRight', slideTo('right') )
+      transition('isLeft => isRight', slideTo('right') ),
     ]);
 
   function slideTo(direction) {

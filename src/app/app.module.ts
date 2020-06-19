@@ -10,7 +10,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HomeComponent } from './home/home.component';
-import { DocsComponent } from './docs/docs.component';
 import { OneLaunchComponent } from './one-launch/one-launch.component';
 import { OneLaunchInBiggerComponent } from './one-launch-in-bigger/one-launch-in-bigger.component';
 
@@ -32,10 +31,6 @@ export const appRouteList: Routes = [
       data: {animation: 'isLeft'}
     },
     {
-      path: 'documentation',
-      component: DocsComponent,
-    },
-    {
       path: 'mission/:id',
       component: OneLaunchInBiggerComponent,
       data: {animation: 'isRight'}
@@ -48,7 +43,6 @@ export const appRouteList: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    DocsComponent,
     OneLaunchComponent,
     OneLaunchInBiggerComponent
   ],

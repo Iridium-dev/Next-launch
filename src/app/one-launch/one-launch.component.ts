@@ -34,13 +34,12 @@ export class OneLaunchComponent implements OnInit {
 
 
 
-    /*else{
+    else{
       this.http.get(this.launch.rocket.configuration.url)
         .subscribe(data => {
-          console.log(data);
-          this.backgroundUrl = data.image_url;
+          this.transformData(data);
         })
-    }*/ //a retirer à la fin pour eviter de faire trop de requete
+    }  //a retirer à la fin pour eviter de faire trop de requete
 
     this.launch.id = setInterval(() => {
       this.updateCountDown();
@@ -49,6 +48,10 @@ export class OneLaunchComponent implements OnInit {
 
 
 
+  }
+
+  transformData(data){
+    this.backgroundUrl = data.image_url;
   }
 
   ngOnDestroy() {

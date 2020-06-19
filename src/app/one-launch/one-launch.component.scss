@@ -10,6 +10,21 @@
   margin-bottom: 40px;
 }
 
+@media only screen and (max-width: 800px) {
+  .oneCard{
+    width: 100%;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 18px 18px 30px #D1D9E6, -18px -18px 30px #fff;
+    display: flex;
+    flex-direction: column;
+    transition: 0.05s ease-in-out all;
+    cursor: pointer;
+    outline: 0px;
+    margin-bottom: 40px;
+  }
+}
+
 .informationPart{
   padding: 20px;
 }
@@ -17,6 +32,8 @@
 .net{
   color: #333;
   font-weight: 400;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .name{
@@ -33,16 +50,16 @@
 }
 
 .oneCard:hover{
-  background-color: #d5deed;
+  background-color: #dae1ed;
   box-shadow: 10px 10px 20px #c1cad9, -10px -10px 20px #fff;
 }
 
 .updateCountDown{
-  margin-left: 20px;
   background-color: #333;
   border-radius: 2px;
   color: #fff;
   padding: 2px 4px;
+  margin-left: 5px;
 }
 
 .parameterDataContainer{

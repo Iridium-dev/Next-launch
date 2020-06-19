@@ -1,7 +1,8 @@
 .allLaunchContainer{
   width: 60%;
   min-width: 600px;
-  margin-left: -10%;
+  margin-left: -28px;
+  margin-top: -28px;
 }
 
 :host{
@@ -32,4 +33,67 @@ footer{
   width: 100%;
   justify-content: center;
   margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.buttonMoreLaunch{
+  cursor: pointer;
+  opacity: 0.9;
+  user-select: none;
+}
+
+.buttonMoreLaunch:hover{
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.footerPart{
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+}
+
+.builtWith{
+  font-size: 1.7em;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.oneTechno{
+  font-weight: 300;
+  margin: 5px 2.5px 5px 2.5px;
+}
+
+.technoUsedContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.titleInFooter{
+  font-size: 2.3em;
+  margin: 10px;
+}
+
+.linkInFooter{
+  color: #fff;
+
+}
+
+.githubLink{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: 300;
+  text-decoration-color: #ffffffaa;
+}
+
+@media only screen and (max-width: 800px) {
+  .allLaunchContainer{
+    width: 80%;
+    min-width: 300px;
+  }
 }

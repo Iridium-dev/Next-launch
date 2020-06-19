@@ -6,6 +6,7 @@
 }
 
 
+
 .oneContainer{
   background-color: #ECF0F3;
   box-shadow: 18px 18px 30px #D1D9E6, -18px -18px 30px #fff;
@@ -68,4 +69,26 @@ a{
 
 .linkBack{
   margin-left: 20px;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+  .noneImageContainer{
+    padding: 10px;
+  }
+
+  .oneContainer{
+    flex-grow: 0;
+    max-width: 80vw;
+    margin: 0px;
+    margin-bottom: 30px;
+  }
+
+  .bigTitle{
+    width: 80%;
+    font-size: 1.5em;
+    margin-left: 10%;
+  }
+
 }

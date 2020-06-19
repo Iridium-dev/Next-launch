@@ -36,10 +36,24 @@ h2{
   color: #ffffffaa;
 }
 
-footer{
-  display: flex;
-  background-color: #111;
-  padding: 50px;
-  color: #ffffffcc;
-  align-items: center;
+@media only screen and (max-width: 800px) {
+  header{
+    position: relative;
+    top: 10px;
+    margin-top: 10px;
+    margin-bottom: 60px;
+  }
+}
+
+
+@media only screen and (min-device-width: 480px)
+                   and (max-device-width: 640px)
+                   and (orientation: landscape) {
+
+                     header{
+                       position: relative;
+                       top: 10px;
+                       margin-top: 10px;
+                       margin-bottom: 60px;
+                     }  
 }

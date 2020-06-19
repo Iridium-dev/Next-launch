@@ -1,8 +1,7 @@
 <header>
   <h2 data-aos='fade-up' data-aos-delay="50">Next launch</h2>
   <div class="elementsInTheOrderPart">
-    <h4 data-aos='fade-up' data-aos-delay="150" class="elementInHeader" routerLink="schedule" routerLinkActive="linkActive">{{missionState}}</h4>
-    <h4 data-aos='fade-up' data-aos-delay="200" class="elementInHeader" routerLink="documentation" routerLinkActive="linkActive">Docs</h4>
+    <h4 data-aos='fade-up' data-aos-delay="150" class="elementInHeader" routerLink="schedule" routerLinkActive="linkActive" *ngIf="missionState">Back to schedule</h4>
   </div>
 </header>
 
@@ -10,11 +9,3 @@
 <div [@routeAnimations]="prepareRoute(outlet)">
   <router-outlet #outlet="outlet" (activate)="updateUrl()"></router-outlet>
 </div>
-
-<!--
-<footer>
-  <h2 class="titleInFooter">Next launch</h2>
-  <h4 class="elementInHeader" routerLink="schedule" routerLinkActive="linkActiveFooter">Schedule</h4>
-  <h4 class="elementInHeader" routerLink="documentation" routerLinkActive="linkActiveFooter">Docs</h4>
-</footer>
--->
