@@ -1,7 +1,7 @@
 # NextLaunch
 
 This project is made with angular 9.1.8.
-The simpliest way forsee upcoming launch.
+The simpliest way for see upcoming launch.
 
 ## Built with
 
